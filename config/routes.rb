@@ -1,6 +1,6 @@
 SampleApp::Application.routes.draw do
  # get "users/new"
-  resources :users
+  resources :users #автоматически обеспечивает наше Rails приложение возможностью отвечать на RESTful URL
   root  'static_pages#home'
   match '/signup',  to: 'users#new',            via: 'get'
   match '/help',    to: 'static_pages#help',    via: 'get'
