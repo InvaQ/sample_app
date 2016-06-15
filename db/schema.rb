@@ -14,13 +14,13 @@
 ActiveRecord::Schema.define(version: 20160603124047) do
 
   create_table "users", force: true do |t|
-    t.string   "name"
-    t.string   "email"
+    t.string   "name",            limit: nil
+    t.string   "email",           limit: nil
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "password_digest"
-    t.string   "remember_token"
-    t.boolean  "admin",           default: false
+    t.string   "password_digest", limit: nil
+    t.string   "remember_token",  limit: nil
+    t.boolean  "admin",                       default: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

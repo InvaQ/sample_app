@@ -76,9 +76,7 @@ describe "authorization" do
             before do
               delete signout_path
               visit signin_path
-              fill_in "Email",    with: user.email
-              fill_in "Password", with: user.password
-              click_button "Sign in"
+              sign_in user
             end
 
             it "should render the default (profile) page" do
