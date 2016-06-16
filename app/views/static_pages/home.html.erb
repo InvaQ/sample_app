@@ -1,8 +1,11 @@
 <% if signed_in? %>
   <div class="row">
     <aside class="span4">
-      <section>
+     <section>
         <%= render 'shared/user_info' %>
+      </section>
+      <section>
+        <%= render 'shared/stats' %>
       </section>
       <section>
         <%= render 'shared/micropost_form' %>
@@ -18,8 +21,7 @@
   <h1>Welcome to my first App</h1>
 
   <h2>
-    Все честно сам делал, по примеру:
-    <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>     
+    Все честно сам делал, по примеру: Ruby on Rails Tutorial    
   </h2>
 <h3>Зарегистрируйся, пожалуйста ;) </h3>
 
